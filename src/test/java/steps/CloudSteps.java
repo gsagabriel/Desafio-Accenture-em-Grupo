@@ -16,15 +16,15 @@ public class CloudSteps {
 	public WebDriver driver;
 	WebDriverWait wait;
 	
-	@Dado("clico no item do menu Cloud")
+	@Dado("clico no item do menu CloudTest")
 	public void clico_no_item_do_menu_cloud() {
-		wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Cloud")));
-		driver.findElement(By.linkText("Cloud")).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.linkText("CloudTest")));
+		driver.findElement(By.linkText("CloudTest")).click();
 	}
 
 	@Então("devo encontrar o título {string}")
 	public void devo_encontrar_o_título(String string) {
-		assertEquals ("Serviços de Cloud", driver.findElement(By.xpath("//*[@id=\"full-width-text-container\"]/div/article/div/h1")).getText());
+		assertEquals ("Serviços de CloudTest", driver.findElement(By.xpath("//*[@id=\"full-width-text-container\"]/div/article/div/h1")).getText());
 	}
 
 }

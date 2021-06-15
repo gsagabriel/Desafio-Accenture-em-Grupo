@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class ServicosTeste {
+public class ServicosTest {
 	WebDriver driver;
 	WebDriverWait wait;
 			
@@ -27,21 +27,25 @@ public class ServicosTeste {
 						}
 	        
 	@Test
-	public void cenarioServico(){
+	public void cenario03(){
 		
 		// Abre o Driver.
 		driver.get("https://www.accenture.com/");   
 					      
+		// Clicar no menu serviços
 		 driver.findElement(By.xpath("//*[@id=\"navigation-menu\"]/div[2]/div[1]/span")).click();
+		 
+		 // Validação do Menu
 		 wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Accenture Strategy")));
 		 
+		 // Conferência de Dados
 		 assertEquals("Accenture Strategy", driver.findElement(By.linkText("Accenture Strategy")).getText());
 		 assertEquals("Application Services", driver.findElement(By.linkText("Application Services")).getText());
 		 assertEquals("Artificial Intelligence", driver.findElement(By.linkText("Artificial Intelligence")).getText());
 		 assertEquals("Automation", driver.findElement(By.linkText("Automation")).getText());
 		 assertEquals("Business Process Services", driver.findElement(By.linkText("Business Process Services")).getText());
 		 assertEquals("Change Management", driver.findElement(By.linkText("Change Management")).getText());
-		 assertEquals("CloudSteps", driver.findElement(By.linkText("CloudSteps")).getText());
+		 assertEquals("CloudTest", driver.findElement(By.linkText("CloudTest")).getText());
 		 assertEquals("Customer Experience", driver.findElement(By.linkText("Customer Experience")).getText());
 		 assertEquals("Data & Analytics", driver.findElement(By.linkText("Data & Analytics")).getText());
 		 assertEquals("Ecosystem Partners", driver.findElement(By.linkText("Ecosystem Partners")).getText());

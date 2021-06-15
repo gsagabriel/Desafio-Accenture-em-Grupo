@@ -8,8 +8,7 @@
   Dado que estou no site da Accenture
   E clico no menu Serviços
   Então devo ver os Serviços abaixo
- 
-  
+   
  Exemplos: 
  			| 			Serviços	  				 			|
       | "Accenture Strategy" 						|
@@ -33,8 +32,4 @@
 			| "Sustainability" 								|
 			| "Technology Consulting" 				|
 			| "Technology Innovation" 				|
-			| "Zero Based Budgeting (ZBB)" 	  |
-
-
-
- 
+			| "Zero Based Budgeting (ZBB)" 	  | 

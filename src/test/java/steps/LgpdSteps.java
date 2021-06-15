@@ -27,8 +27,9 @@ public class LgpdSteps {
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		
+        // Inserindo Pausa.
+        wait = new WebDriverWait (driver, 10l);
 		
-        
 	}
 
 	@Dado("que estou no site da Accenture")
@@ -38,8 +39,6 @@ public class LgpdSteps {
 
 	@E ("aceito os Termos LGPD")
 	public void aceito_os_termos_lgpd() {
-		 // Inserindo Pausa.
-		wait = new WebDriverWait (driver, 10l);
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"onetrust-pc-btn-handler\"]")));
 		driver.findElement(By.xpath("//*[@id=\"onetrust-pc-btn-handler\"]")).click();
 	}

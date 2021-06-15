@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class Cloud {
+public class CloudTest {
 	WebDriver driver;
 	WebDriverWait wait;
 
@@ -27,20 +27,27 @@ public class Cloud {
 	}
 
 	@Test
-	public void cenarioServico() {
+	public void cenario04() {
 
 		// Abre o Driver.
 		driver.get("https://www.accenture.com/");
-
+		
+		// Abre o menu Serviços
 		driver.findElement(By.xpath("//*[@id=\"navigation-menu\"]/div[2]/div[1]/span")).click();
-		wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Cloud")));
-		driver.findElement(By.linkText("Cloud")).click();
-		assertEquals ("Serviços de Cloud", driver.findElement(By.xpath("//*[@id=\"full-width-text-container\"]/div/article/div/h1")).getText());
+		
+		// Verificar a abertura do menu 
+		wait.until(ExpectedConditions.elementToBeClickable(By.linkText("CloudTest")));
+		
+		// Clicar no item CloudTest
+		driver.findElement(By.linkText("CloudTest")).click();
+		
+		// Validar se o item CloudTest
+		assertEquals ("Serviços de CloudTest", driver.findElement(By.xpath("//*[@id=\"full-width-text-container\"]/div/article/div/h1")).getText());
 	}
 
 	@After
 	public void close() {
-// Fecha o Driver
+// Fechar o Driver
 		driver.close();
 	}
 
