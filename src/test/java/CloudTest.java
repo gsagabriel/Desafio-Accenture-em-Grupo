@@ -36,13 +36,13 @@ public class CloudTest {
 		driver.findElement(By.xpath("//*[@id=\"navigation-menu\"]/div[2]/div[1]/span")).click();
 		
 		// Verificar a abertura do menu 
-		wait.until(ExpectedConditions.elementToBeClickable(By.linkText("CloudTest")));
+		wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Cloud")));
 		
 		// Clicar no item CloudTest
-		driver.findElement(By.linkText("CloudTest")).click();
+		driver.findElement(By.linkText("Cloud")).click();
 		
 		// Validar se o item CloudTest
-		assertEquals ("Serviços de CloudTest", driver.findElement(By.xpath("//*[@id=\"full-width-text-container\"]/div/article/div/h1")).getText());
+		assertEquals ("Serviços de Cloud", driver.findElement(By.xpath("//*[@id=\"full-width-text-container\"]/div/article/div/h1")).getText());
 	}
 
 	@After

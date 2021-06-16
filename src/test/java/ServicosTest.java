@@ -45,7 +45,7 @@ public class ServicosTest {
 		 assertEquals("Automation", driver.findElement(By.linkText("Automation")).getText());
 		 assertEquals("Business Process Services", driver.findElement(By.linkText("Business Process Services")).getText());
 		 assertEquals("Change Management", driver.findElement(By.linkText("Change Management")).getText());
-		 assertEquals("CloudTest", driver.findElement(By.linkText("CloudTest")).getText());
+		 assertEquals("Cloud", driver.findElement(By.linkText("Cloud")).getText());
 		 assertEquals("Customer Experience", driver.findElement(By.linkText("Customer Experience")).getText());
 		 assertEquals("Data & Analytics", driver.findElement(By.linkText("Data & Analytics")).getText());
 		 assertEquals("Ecosystem Partners", driver.findElement(By.linkText("Ecosystem Partners")).getText());
