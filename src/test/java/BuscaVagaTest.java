@@ -46,17 +46,17 @@ public class BuscaVagaTest {
 		driver.findElement(By.linkText("Procure Por Vagas")).click();
 		
 		//Limpa o Campo
-		driver.findElement(By.xpath("//*[@id=\"job-search-hero-bar\"]")).clear();
+		driver.findElement(By.id("job-search-hero-bar")).clear();
 		
 		//Preenche o Campo de Pesquisa e busca
-		driver.findElement(By.xpath("//*[@id=\"job-search-hero-bar\"]")).sendKeys("Desenvolvedor");
-		driver.findElement(By.xpath("//*[@id=\"job-search-hero-bar\"]")).sendKeys(Keys.ENTER);
+		driver.findElement(By.id("job-search-hero-bar")).sendKeys("Desenvolvedor");
+		driver.findElement(By.id("job-search-hero-bar")).sendKeys(Keys.ENTER);
 		
 		// Aguarda a opção ficar disponível para clique
 		wait.until(ExpectedConditions.textToBe(By.className("search-results-text"), "TODAS AS VAGAS"));		
 		
 		//Validação
-		assertEquals ("TODAS AS VAGAS", driver.findElement(By.xpath("//*[@id=\"latest-nav\"]/h2/span[1]")).getText());
+		assertEquals ("TODAS AS VAGAS", driver.findElement(By.className("search-results-text")).getText());
 				
 	}
 

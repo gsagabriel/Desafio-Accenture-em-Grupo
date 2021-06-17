@@ -35,10 +35,10 @@ public class LgpdTest {
 			driver.get("https://www.accenture.com/");   
 						
 		    // Pausa para identificar o Botão em caso de Alguma instabilidade
-			        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"onetrust-pc-btn-handler\"]")));
+			        wait.until(ExpectedConditions.elementToBeClickable(By.id("onetrust-pc-btn-handler")));
 	    
 			// Identifica e abre o botão de LGPD 
-			driver.findElement(By.xpath("//*[@id=\"onetrust-pc-btn-handler\"]")).click();  	
+			driver.findElement(By.id("onetrust-pc-btn-handler")).click();  	
 			
 			// Pausa para identificar o Botão em caso de Alguma instabilidade			
 			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@id='onetrust-pc-sdk']/div[3]/div/button")));
@@ -57,10 +57,10 @@ public class LgpdTest {
 			driver.get("https://www.accenture.com/");   
 						
 		    // Pausa para identificar o Botão em caso de Alguma instabilidade
-			        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"onetrust-pc-btn-handler\"]")));
+			        wait.until(ExpectedConditions.elementToBeClickable(By.id("onetrust-pc-btn-handler")));
 	    
 			// Identifica e abre o botão de LGPD 
-			driver.findElement(By.xpath("//*[@id=\"onetrust-pc-btn-handler\"]")).click();  	
+			driver.findElement(By.id("onetrust-pc-btn-handler")).click();  	
 			
 			// Pausa para identificar o Botão em caso de Alguma instabilidade			
 			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@id='onetrust-pc-sdk']/div[3]/div/button")));
@@ -69,16 +69,16 @@ public class LgpdTest {
 			driver.findElement(By.xpath("//div[@id='onetrust-pc-sdk']/div[3]/div/button")).click();
 
 			// Pausa para Validação e Abertura do Modal
-			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"optanon-minimize-button\"]")));
-			driver.findElement(By.xpath("//*[@id=\"optanon-minimize-button\"]")).click();
-			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"privacy-text\"]")));
+			wait.until(ExpectedConditions.elementToBeClickable(By.id("optanon-minimize-button")));
+			driver.findElement(By.id("optanon-minimize-button")).click();
+			wait.until(ExpectedConditions.elementToBeClickable(By.id("privacy-text")));
 			
 			// Validações do Modal
-			assertEquals("Sua privacidade", driver.findElement(By.xpath("//*[@id=\"privacy-text\"]")).getText());
-			assertEquals("Cookies estritamente necessárias", driver.findElement(By.xpath("//*[@id=\"ot-header-id-1\"]")).getText());
-			assertEquals("Cookies Analíticos de Primeira Parte", driver.findElement(By.xpath("//*[@id=\"ot-header-id-2\"]")).getText());
-			assertEquals("Cookies de Desempenho e Cookies Funcionais", driver.findElement(By.xpath("//*[@id=\"ot-header-id-3\"]")).getText());
-			assertEquals("Cookies de Publicidade e Redes Sociais", driver.findElement(By.xpath("//*[@id=\"ot-header-id-4\"]")).getText());			
+			assertEquals("Sua privacidade", driver.findElement(By.id("privacy-text")).getText());
+			assertEquals("Cookies estritamente necessárias", driver.findElement(By.id("ot-header-id-1")).getText());
+			assertEquals("Cookies Analíticos de Primeira Parte", driver.findElement(By.id("ot-header-id-2")).getText());
+			assertEquals("Cookies de Desempenho e Cookies Funcionais", driver.findElement(By.id("ot-header-id-3")).getText());
+			assertEquals("Cookies de Publicidade e Redes Sociais", driver.findElement(By.id("ot-header-id-4")).getText());			
 		}
 
 				@After

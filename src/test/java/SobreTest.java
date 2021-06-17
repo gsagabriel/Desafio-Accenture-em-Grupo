@@ -27,7 +27,7 @@ public class SobreTest {
 	}
 		
 		@Test
-		public void cenario06() {
+		public void cenario07() {
 			
 			// Busca o Site
 			driver.get("https://accenture.com/");

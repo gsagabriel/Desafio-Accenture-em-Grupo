@@ -47,7 +47,7 @@ public class CarreiraTest {
 		
 		// Valida o teste
 		assertEquals("Carreiras em tecnologia",
-				driver.findElement(By.xpath("//*[@id=\"aoi-hero\"]/div/div/div[1]/div/article/div/h1")).getText());
+				driver.findElement(By.cssSelector("h1")).getText());
 
 	}
 

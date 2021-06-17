@@ -39,8 +39,8 @@ public class LgpdSteps {
 
 	@E ("aceito os Termos LGPD")
 	public void aceito_os_termos_lgpd() {
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"onetrust-pc-btn-handler\"]")));
-		driver.findElement(By.xpath("//*[@id=\"onetrust-pc-btn-handler\"]")).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.id("onetrust-pc-btn-handler")));
+		driver.findElement(By.id("onetrust-pc-btn-handler")).click();
 	}
 
 	@Entao("deve-se fechar a caixa de informações")
@@ -52,34 +52,34 @@ public class LgpdSteps {
 	
 	@Então("clico em configurações de cookie")
 	public void clico_em_configurações_de_cookie() {
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"optanon-minimize-button\"]")));
-		driver.findElement(By.xpath("//*[@id=\"optanon-minimize-button\"]")).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.id("optanon-minimize-button")));
+		driver.findElement(By.id("optanon-minimize-button")).click();
 	}
 	
 	@Então("devo ver o item de sua privacidade")
 	public void devo_ver_o_item_de_sua_privacidade() {
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"privacy-text\"]")));
-			assertEquals("Sua privacidade", driver.findElement(By.xpath("//*[@id=\"privacy-text\"]")).getText());
+		wait.until(ExpectedConditions.elementToBeClickable(By.id("privacy-text")));
+			assertEquals("Sua privacidade", driver.findElement(By.id("privacy-text")).getText());
 	}
 
 	@Então("devo ver Cookies estritamente necessárias")
 	public void devo_ver_cookies_estritamente_necessárias() {
-		   assertEquals("Cookies estritamente necessárias", driver.findElement(By.xpath("//*[@id=\"ot-header-id-1\"]")).getText());
+		   assertEquals("Cookies estritamente necessárias", driver.findElement(By.id("ot-header-id-1")).getText());
 	}
 	
 	@Então("devo ver Cookies Analíticos de Primeira Parte")
 	public void devo_ver_cookies_analíticos_de_primeira_parte() {
-		assertEquals("Cookies Analíticos de Primeira Parte", driver.findElement(By.xpath("//*[@id=\"ot-header-id-2\"]")).getText());
+		assertEquals("Cookies Analíticos de Primeira Parte", driver.findElement(By.id("ot-header-id-2")).getText());
 	}
 	
 	@Então("devo ver Cookies de Desempenho e Cookies Funcionais")
 	public void devo_ver_cookies_de_desempenho_e_cookies_funcionais() {
-		assertEquals("Cookies de Desempenho e Cookies Funcionais", driver.findElement(By.xpath("//*[@id=\"ot-header-id-3\"]")).getText());
+		assertEquals("Cookies de Desempenho e Cookies Funcionais", driver.findElement(By.id("ot-header-id-3")).getText());
 	}
 	
 	@Então("devo ver Cookies de Publicidade e Redes Sociais")
 	public void devo_ver_cookies_de_publicidade_e_redes_sociais() {
-			assertEquals("Cookies de Publicidade e Redes Sociais", driver.findElement(By.xpath("//*[@id=\"ot-header-id-4\"]")).getText());
+			assertEquals("Cookies de Publicidade e Redes Sociais", driver.findElement(By.id("ot-header-id-4")).getText());
 	}
 	
 	

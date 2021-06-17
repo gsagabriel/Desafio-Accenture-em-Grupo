@@ -38,7 +38,7 @@ public class CarreiraSteps {
 	@E("clico no menu Carreiras")
 	public void clico_no_menu_carreiras() {
 
-		// wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"navigation-menu\"]/div[4]/div[1]")));
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"navigation-menu\"]/div[4]/div[1]")));
 		driver.findElement(By.xpath("//*[@id=\"navigation-menu\"]/div[4]/div[1]")).click();
 
 	}
@@ -52,7 +52,7 @@ public class CarreiraSteps {
 	@Então("devo ver o destque em Carreiras em Tecnologia")
 	public void devo_ver_o_destque_em_carreiras_em_tecnologia() {
 		assertEquals("Carreiras em tecnologia",
-				driver.findElement(By.xpath("//*[@id=\"aoi-hero\"]/div/div/div[1]/div/article/div/h1")).getText());
+				driver.findElement(By.cssSelector("h1")).getText());
 	}
 
 	@After

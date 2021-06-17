@@ -39,7 +39,7 @@ public class BuscaVagaSteps {
 	@E ("clico no menu Carreiras")
 	public void clico_no_menu_carreiras() {
 			
-			//wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"navigation-menu\"]/div[4]/div[1]")));
+			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"navigation-menu\"]/div[4]/div[1]")));
 		    driver.findElement(By.xpath("//*[@id=\"navigation-menu\"]/div[4]/div[1]")).click();
 		
 	}
@@ -56,19 +56,19 @@ public class BuscaVagaSteps {
 
 	@E ("digito no campo busca “desenvolvedor”")
 	public void digito_no_campo_busca_desenvolvedor() {
-		driver.findElement(By.xpath("//*[@id=\"job-search-hero-bar\"]")).clear();
-		driver.findElement(By.xpath("//*[@id=\"job-search-hero-bar\"]")).sendKeys("Desenvolvedor");
+		driver.findElement(By.id("job-search-hero-bar")).clear();
+		driver.findElement(By.id("job-search-hero-bar")).sendKeys("Desenvolvedor");
 	}
 
 	@E ("clico no botão procurar")
 	public void clico_no_botão_procurar() {
-		driver.findElement(By.xpath("//*[@id=\"job-search-hero-bar\"]")).sendKeys(Keys.ENTER);
+		driver.findElement(By.id("job-search-hero-bar")).sendKeys(Keys.ENTER);
 	}
 
 	@Então("devo encontrar vaga para programadores")
 	public void devo_encontrar_vaga_para_programadores() {
 		wait.until(ExpectedConditions.textToBe(By.className("search-results-text"), "TODAS AS VAGAS"));		
-		assertEquals ("TODAS AS VAGAS", driver.findElement(By.xpath("//*[@id=\"latest-nav\"]/h2/span[1]")).getText());
+		assertEquals ("TODAS AS VAGAS", driver.findElement(By.className("search-results-text")).getText());
 	}
 	
 	@After 
